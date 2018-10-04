@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Start Bootstrap - Heroic Features](https://startbootstrap.com/template-overviews/heroic-features/)
 
 [Heroic Features](http://startbootstrap.com/template-overviews/heroic-features/) is a multipurpose HTML template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
@@ -64,3 +65,7 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/gh-pages/LICENSE) license.
+=======
+# Perdeu-Achou
+# Sistema Web para facilitar a vida de quem só não perde a cabeça porque esta colada no pescoço.
+>>>>>>> 7b703f79bf13435b9030475ce97d5a98c29b9bfd

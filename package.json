@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "title": "Heroic Features",
     "name": "startbootstrap-heroic-features",
     "version": "4.1.1",
@@ -33,4 +34,26 @@
         "browser-sync": "2.24.5",
         "gulp": "^3.9.1"
     }
+=======
+  "name": "perdeu-achou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrooofaria/Perdeu-Achou.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrooofaria/Perdeu-Achou/issues"
+  },
+  "homepage": "https://github.com/pedrooofaria/Perdeu-Achou#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+>>>>>>> 7b703f79bf13435b9030475ce97d5a98c29b9bfd
 }
