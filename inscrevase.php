@@ -1,3 +1,10 @@
+<?php
+
+$erro_usuario = isset($_GET['erro_usuario']) ? $_GET['erro_usuario'] : 0;
+$erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -8,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
   <!-- copiei do login-->
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
@@ -32,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-image:url(imagem/azul-ceu-3.png)">
       <div class="container">
         <img src="imagem/logo.png" alt="logo" width=40 height=40>
-        <a class="navbar-brand" href="#" style="color:darkblue">Perdeu? Achou!</a>
+        <a class="navbar-brand" href="index.php" style="color:darkblue">Perdeu? Achou!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,74 +67,41 @@
     <div class="form">
       
         <ul class="tab-group">
-          <li class="tab active"><a href="#login">Entrar</a></li>
           <li class="tab"><a href="#signup">Inscreva-se</a></li>
         </ul>
         
         <div class="tab-content">
-          <div id="login">   
-                <h1>Faça login</h1>
-                
-                <form action="/" method="post">
-                
-                  <div class="field-wrap">
-                  <label>
-                    Email<span class="req">*</span>
-                  </label>
-                  <input type="email"required autocomplete="off"/>
-                </div>
-                
-                <div class="field-wrap">
-                  <label>
-                    Senha<span class="req">*</span>
-                  </label>
-                  <input type="password"required autocomplete="off"/>
-                </div>
-                
-                <p class="forgot"><a href="#">Esqueceu sua senha?</a></p>
-                
-                <button class="button button-block"/>Entrar</button>
-                
-                </form>
-      
-          </div>
-          
-          <div id="signup">   
+
+         <div id="signup">   
             <h1>Inscreva-se</h1>
+            <form method="post" action="registra_usuario.php" id="formCadastrarse">
+					<div class="form-group">
+						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
+						<?php
+						
+							if($erro_usuario) {
+								echo '<font style="color:#FF0000">Usuario Já Existe';
+							}
+						
+						?>
+					</div>
+
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
+						<?php
+						
+							if($erro_email) {
+								echo '<font style="color:#FF0000">Email Já Existe';
+							}
+						
+						?>
+					</div>
+					
+					<div class="form-group">
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
+					</div>
             
-            <form action="/" method="post">
-            
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  Primeiro Nome<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-          
-              <div class="field-wrap">
-                <label>
-                  Último Nome<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-              </div>
-            </div>
-  
-            <div class="field-wrap">
-              <label>
-                Email<span class="req">*</span>
-              </label>
-              <input type="email"required autocomplete="off"/>
-            </div>
-            
-            <div class="field-wrap">
-              <label>
-                Senha<span class="req">*</span>
-              </label>
-              <input type="password"required autocomplete="off"/>
-            </div>
-            
-            <button type="submit" class="button button-block"/>Registrar </button>
+            <button type="submit" id="registrar" name="registrar" class="button button-block"/>Registrar </button>
             
             </form>
   

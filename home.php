@@ -1,3 +1,12 @@
+<?php
+
+	session_start();
+
+	if(!isset($_SESSION['usuario'])){
+		header('Location: index.php?erro=1');
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -26,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-image:url(imagem/azul-ceu-3.png)">
       <div class="container">
         <img src="imagem/logo.png" alt="logo" width=40 height=40>
-        <a class="navbar-brand" href="#" style="color:darkblue">Perdeu? Achou!</a>
+        <a class="navbar-brand" href="home.php" style="color:darkblue">Perdeu? Achou!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +53,10 @@
               <a class="nav-link" href="#" style="color:darkblue">Perdidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html" style="color:darkblue">Logar/Cadastrar</a>
+              <a class="nav-link" href="#" style="color:darkblue">Meu Perfil</a>
+            </li>
+			  <li class="nav-item">
+              <a class="nav-link" href="sair.php" style="color:darkblue">Sair</a>
             </li>
           </ul>
         </div>
